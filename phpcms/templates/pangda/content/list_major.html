@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+	<meta name="keywords" content="{$SEO['keyword']}"/>
+	<meta name="description" content="{$SEO['description']}"/>
+	<link rel="stylesheet" type="text/css" href="{SKIN_PATH}/css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="{SKIN_PATH}/css/common.css"/>
+</head>
+<body>
+	{template "content","inc_header"}
+	
+	<!-- 头部广告 开始 -->
+	<div class="top_ad">
+	<a href="#"><img src="{SKIN_PATH}/images/img_topad.jpg" alt="" /></a>
+	</div>
+	<!-- 头部广告 结束 -->
+	
+	<div class="location">
+	当前位置：<a href="{siteurl($siteid)}">{$SEO['site_title']}</a> &gt; {catpos($catid)}
+	</div>
+	
+	<div class="mainbox">
+		<div class="mb_top"></div>
+		<div class="mb_middle">
+		{pc:content action="lists" catid="$catid" moreinfo="1" order="listorder ASC" num="8"}
+			{php $index=1}
+			{loop $data $r}
+			{if $index%2==1}
+				{if $index==7}
+				<div class="mb_content" style="background:none">
+				{else}
+				<div class="mb_content">
+				{/if}
+				<ul>
+					<li>
+						<dl>
+							<dt class="bg_0{$index}"></dt>
+							<dd class="zsdx">
+							<img src="{thumb($r[thumb],143,143)}" alt="{$r[title]}" />
+							<p class="info_01">
+								<strong>招生对象：</strong><br/>
+								{$r[zsdx]}
+							</p>
+							<p class="info_02">
+								<strong>专业特色：</strong>
+								{$r[zyts]}
+							</p>
+							</dd>
+							<dd class="qq">在线咨询：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={$r[qq]}&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:{$r[qq]}:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a><a href="#" class="ico_bm"><img src="{SKIN_PATH}/images/img_zysz_wsbm.jpg" alt="" /></a></dd>
+						</dl>
+					</li>
+			{else}
+					<li class="shadow">
+						<dl>
+							<dt class="bg_0{$index}"></dt>
+							<dd class="zsdx">
+							<img src="{thumb($r[thumb],143,143)}" alt="{$r[title]}" />
+							<p class="info_01">
+								<strong>招生对象：</strong><br/>
+								{$r[zsdx]}
+							</p>
+							<p class="info_02">
+								<strong>专业特色：</strong>
+								{$r[zyts]}
+							</p>
+							</dd>
+							<dd class="qq">在线咨询：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={$r[qq]}&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:{$r[qq]}:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a><a href="#" class="ico_bm"><img src="{SKIN_PATH}/images/img_zysz_wsbm.jpg" alt="" /></a></dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			{/if}
+		{php $index++}
+		{/loop}
+		{/pc}
+		</div>
+		
+		{template "content","inc_footer2"}
+</body>
+</html>

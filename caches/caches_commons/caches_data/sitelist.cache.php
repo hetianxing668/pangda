@@ -3,13 +3,13 @@ return array (
   1 => 
   array (
     'siteid' => '1',
-    'name' => '默认站点',
+    'name' => '庞大汽车商学院',
     'dirname' => '',
     'domain' => 'http://localhost.pangda.com/',
-    'site_title' => 'PHPCMS演示站',
-    'keywords' => 'PHPCMS演示站',
-    'description' => 'PHPCMS演示站',
-    'release_point' => '',
+    'site_title' => '庞大汽车商学院',
+    'keywords' => '庞大汽车商学院',
+    'description' => '庞大汽车商学院',
+    'release_point' => '1',
     'default_style' => 'pangda',
     'template' => 'pangda',
     'setting' => 'array (

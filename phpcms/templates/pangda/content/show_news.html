@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+	<meta name="keywords" content="{$SEO['keyword']}"/>
+	<meta name="description" content="{$SEO['description']}"/>
+	<script type="text/javascript" src="{SKIN_PATH}/js/jquery-1.9.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{SKIN_PATH}/css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="{SKIN_PATH}/css/common.css"/>
+</head>
+<body>
+	{template "content","inc_header"}
+	
+	<!-- 头部广告 开始 -->
+	<div class="top_ad">
+	<a href="#"><img src="{SKIN_PATH}/images/img_topad.jpg" alt="" /></a>
+	</div>
+	<!-- 头部广告 结束 -->
+	
+	<div class="mainbox fixed">
+		{template "content","inc_left"}
+		<div class="rightbox fixed">
+			<div class="location">
+			当前位置：<a href="{siteurl($siteid)}">{$SEO['site_title']}</a> &gt; {catpos($catid)}内容页
+			</div>
+			<h1 class="title">
+				{$title}<br/>
+				<span>时间：{$inputtime}&#12288;&#12288;来源：{$copyfrom}&#12288;&#12288; 点击：<span id="hits"></span></span>
+				<script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script>
+			</h1>
+			<div class="content">
+			{$content}
+			</div>
+			
+            <p class="f14">
+                <strong>上一篇：</strong><a href="{$previous_page[url]}">{$previous_page[title]}</a><br />
+                <strong>下一篇：</strong><a href="{$next_page[url]}">{$next_page[title]}</a>
+            </p>
+			{pc:content action="relation" relation="$relation" id="$id" catid="$catid" num="5" keywords="$rs[keywords]"}
+              {if $data}
+                <div class="related">
+                    <h5 class="blue">延伸阅读：</h5>
+                    <ul class="list blue lh24 f14">
+                        {loop $data $r}
+                            <li>·<a href="{$r[url]}" target="_blank">{$r[title]}</a><span>({date('Y-m-d',$r[inputtime])})</span></li>
+                        {/loop}
+                    </ul>
+                </div>
+              {/if}
+			{/pc}
+		</div>
+		</div>
+		<!-- 防错标记 -->
+	</div>
+	
+	{template "content","inc_footer"}
+</body>
+</html>

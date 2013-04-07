@@ -39,6 +39,9 @@ define('CHARSET' ,pc_base::load_config('system','charset'));
 header('Content-type: text/html; charset='.CHARSET);
 
 define('SYS_TIME', time());
+
+//定义自定义模板路径
+define('SKIN_PATH',pc_base::load_config('system','skin_path'));
 //定义网站根路径
 define('WEB_PATH',pc_base::load_config('system','web_path'));
 //js 路径

@@ -1,36 +1,43 @@
 <?php return array (
   'name' => '庞大模板',
   'author' => 'Hesir',
-  'dirname' => 'default',
+  'dirname' => 'pangda',
   'homepage' => 'http://www.web023.com/',
   'version' => '1.0',
   'disable' => 0,
   'file_explan' => 
   array (
-    'templates|default|content' => 
+    'templates|pangda|content' => 
     array (
-      'category.html' => '文章频道页',
+      'category_news.html' => '文章频道页',
       'category_download.html' => '下载频道页',
-      'category_picture.html' => '图片频道页',
+      'category_images.html' => '图片频道页',
+      'category_scvideo.html' => '商学院视频频道页',
       'download.html' => '下载连接页',
       'footer.html' => '底部',
       'header.html' => '顶部',
       'header_min.html' => '迷你顶',
       'header_page.html' => '单网页头部',
       'index.html' => '网站首页',
-      'list.html' => '列表页',
-      'list_download.html' => '下载列表页',
+      'list_news.html' => '文章列表页',
+      'list_images.html' => '图片列表页',
+      'list_major.html' => '专业设置列表页',
+      'list_job.html' => '人才招聘列表页',
+      'list_scvideo.html' => '商学院视频列表页',
+      'list_downloads.html' => '下载列表页',
       'list_picture.html' => '图片列表页',
       'message.html' => '消息提示页',
-      'page.html' => '单网页',
+      'page.html' => '文章单网页',
+      'page_baoming.html' => '在线报名单网页',
       'rss.html' => 'RSS页',
       'search.html' => '搜索',
-      'show.html' => '文章内容页',
+      'show_news.html' => '文章内容页',
+      'show_scvideo.html' => '商学院视频内容页',
       'show_download.html' => '下载内容页',
       'show_picture.html' => '图片内容页',
       'tag.html' => 'tag',
     ),
-    'templates|default|' => 
+    'templates|pangda|' => 
     array (
       'announce' => '公告',
       'comment' => '评论',
@@ -48,7 +55,7 @@
       'wap' => '手机门户',
       'yp' => '黄页模板',
     ),
-    'templates|default|vote' => 
+    'templates|pangda|vote' => 
     array (
       'index.html' => '',
       'list_new.html' => '列表页',
@@ -59,13 +66,13 @@
       'vote_tp_2.html' => '新闻页投票模版',
       'vote_tp_3.html' => '首页投票模版',
     ),
-    'templates|default|link' => 
+    'templates|pangda|link' => 
     array (
       'index.html' => '',
       'list_type.html' => '分类页',
       'register.html' => '申请页',
     ),
-    'templates|default|special' => 
+    'templates|pangda|special' => 
     array (
       'api_picture.html' => '组图',
       'comment.html' => '专题首页评论页',
@@ -75,7 +82,7 @@
       'show.html' => '内容页',
       'special_list.html' => '专题列表',
     ),
-    'templates|default|poster' => 
+    'templates|pangda|poster' => 
     array (
       'banner.html' => '矩形横幅',
       'couplet.html' => '对联广告',
@@ -86,11 +93,11 @@
       'test.html' => '',
       'text.html' => '文字广告',
     ),
-    'templates|default|announce' => 
+    'templates|pangda|announce' => 
     array (
       'show.html' => '内容页',
     ),
-    'templates|default|wap' => 
+    'templates|pangda|wap' => 
     array (
       'big_image.html' => '显示大图模板',
       'category.html' => '频道页模板',
@@ -104,14 +111,14 @@
       'min_header.html' => '小头部模板',
       'show.html' => '内容显示页模板',
     ),
-    'templates|default|pay' => 
+    'templates|pangda|pay' => 
     array (
       'deposit.html' => '支付页模板',
       'pay_list.html' => '支付记录页模板',
       'payment_cofirm.html' => '支付确认页模板',
       'spend_list.html' => '消费记录页模板',
     ),
-    'templates|default|message' => 
+    'templates|pangda|message' => 
     array (
       'group.html' => '系统消息',
       'inbox.html' => '收件箱',
@@ -121,7 +128,7 @@
       'read_only.html' => '已经发消息',
       'send.html' => '写消息',
     ),
-    'templates|default|member' => 
+    'templates|pangda|member' => 
     array (
       'account_manage.html' => '会员管理',
       'account_manage_avatar.html' => '头像管理',
@@ -145,28 +152,28 @@
       'protocol.html' => '注册协议',
       'register.html' => '注册页面',
     ),
-    'templates|default|phpsso' => 
+    'templates|pangda|phpsso' => 
     array (
       'index.html' => '首页',
     ),
-    'templates|default|search' => 
+    'templates|pangda|search' => 
     array (
       'footer.html' => '页尾',
       'header.html' => '页头',
       'index.html' => '首页',
       'list.html' => '列表页',
     ),
-    'templates|default|formguide' => 
+    'templates|pangda|formguide' => 
     array (
       'index.html' => '表单列表页模板',
       'show.html' => '表单详情页模板',
       'show_js.html' => '表单js调用模板',
     ),
-    'templates|default|mood' => 
+    'templates|pangda|mood' => 
     array (
       'index.html' => '新闻心情',
     ),
-    'templates|default|yp' => 
+    'templates|pangda|yp' => 
     array (
       'com_default' => '企业默认模板',
       'index.html' => '黄页首页模板',
@@ -177,12 +184,12 @@
       'show.html' => '',
       'show_news.html' => '',
     ),
-    'templates|default|yp|com_default' => 
+    'templates|pangda|yp|com_default' => 
     array (
       'index.html' => '公司首页模板',
       'style' => '样式文件夹',
     ),
-    'templates|default|comment' => 
+    'templates|pangda|comment' => 
     array (
       'show_list.html' => '内容页评论列表',
       'list.html' => '评论列表',

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+	<meta name="keywords" content="{$SEO['keyword']}"/>
+	<meta name="description" content="{$SEO['description']}"/>
+	<link rel="stylesheet" type="text/css" href="{SKIN_PATH}/css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="{SKIN_PATH}/css/common.css"/>
+</head>
+<body>
+	{template "content","inc_header"}
+	
+	<!-- 头部广告 开始 -->
+	<div class="top_ad">
+	<a href="#"><img src="{SKIN_PATH}/images/img_topad2.jpg" alt="" /></a>
+	</div>
+	<!-- 头部广告 结束 -->
+	<div class="mainbox2 fixed">
+	<div class="note">欢迎业内精英给我们投递简历，合则者约见，电话勿扰。一经录用者，享受国家法定规定的相关福利待遇，并提供良好的发展空间和出国培训深造的机会，。</div>
+	{pc:content action="lists" catid="$catid" moreinfo="1" order="listorder ASC" num="30"}
+	{loop $data $r}
+	<table class="job_list">
+		<tr>
+			<th colspan="2">{$r[title]} (招聘 <span class="sp_red">{$r[num]}</span> 人)</th>
+		</tr>
+		<tr>
+			<th class="left_title">岗位职责</th>
+			<td>
+			{$r[gwzz]}
+			</td>
+		</tr>
+		<tr>
+			<th class="left_title">任职要求</th>
+			<td>
+			{$r[rzyq]}
+			</td>
+		</tr>
+	</table>
+	{/loop}
+	{/pc}
+	
+	{template "content","inc_footer3"}
+</body>
+</html>

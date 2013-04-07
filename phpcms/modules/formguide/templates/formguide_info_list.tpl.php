@@ -24,7 +24,7 @@ if(is_array($datas)){
 	<td align="center">
 	<input type="checkbox" name="did[]" value="<?php echo $d['dataid']?>">
 	</td>
-	<td><?php echo $d['username']?> </td>
+	<td><?php echo empty($d['username'])?$d['uname']:$d['username']?> </td>
 	<td align="center"><?php echo $d['ip']?></td>
 	<td align="center"><?php echo date('Y-m-d', $d['datetime'])?></td>
 	<td align="center"><a href="javascript:check('<?php echo $formid?>', '<?php echo $d['dataid']?>', '<?php echo safe_replace($d['username'])?>');void(0);"><?php echo L('check')?></a> | <a href="?m=formguide&c=formguide_info&a=public_delete&formid=<?php echo $formid?>&did=<?php echo $d['dataid']?>" onClick="return confirm('<?php echo L('confirm', array('message' => L('delete')))?>')"><?php echo L('del')?></a></td>

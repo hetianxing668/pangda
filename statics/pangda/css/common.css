@@ -1,0 +1,147 @@
+/* 内页头部图片 开始 */
+.top_ad{width:1000px;margin:0px auto;margin-top:6px}
+/* 内页头部图片 结束 */
+
+/* mainbox 开始 */
+.mainbox{width:1000px;margin:0px auto;margin-top:10px;background:url("../images/bg_leftmenu_line.jpg") repeat-y scroll left center}
+.mainbox2{width:1000px;margin:0px auto;margin-top:10px;}
+.location{width:1000px;margin:8px auto;border-bottom:1px solid #DFDFDF;height:24px;line-height:24px}
+.location a{color:#C20106;}
+/* 专业设置开始 */
+.mainbox .mb_top{width:100%;height:20px;float:left;background:url(../images/bg_zysz_top.jpg) left top no-repeat;}
+.mainbox .mb_middle{width:100%;float:left;background:url(../images/bg_zysz_middle.jpg) left top repeat-y;}
+.mainbox .mb_content{width:100%;float:left;height:340px;margin-left:4px;background:url(../images/bg_zysz_dashed.jpg) left bottom repeat-x;margin-bottom:10px}
+.mainbox .mb_content ul li{width:490px;float:left;margin-right:10px}
+.mainbox .mb_content ul li.shadow{background:url(../images/bg_zysz_shadow.jpg) left top repeat-y}
+.mainbox .mb_content ul li dl{width:100%;float:left;}
+.mainbox .mb_content ul li dl dt{width:490px;height:48px;}
+.mainbox .mb_content ul li dl dt.bg_01{background:url(../images/bg_zysz_title_01.jpg) left top no-repeat}
+.mainbox .mb_content ul li dl dt.bg_02{background:url(../images/bg_zysz_title_02.jpg) 20px top no-repeat}
+.mainbox .mb_content ul li dl dt.bg_03{background:url(../images/bg_zysz_title_03.jpg) left top no-repeat}
+.mainbox .mb_content ul li dl dt.bg_04{background:url(../images/bg_zysz_title_04.jpg) 20px top no-repeat}
+.mainbox .mb_content ul li dl dt.bg_05{background:url(../images/bg_zysz_title_05.jpg) left top no-repeat}
+.mainbox .mb_content ul li dl dt.bg_06{background:url(../images/bg_zysz_title_06.jpg) 20px top no-repeat}
+.mainbox .mb_content ul li dl dt.bg_07{background:url(../images/bg_zysz_title_07.jpg) left top no-repeat}
+.mainbox .mb_content ul li dl dt.bg_08{background:url(../images/bg_zysz_title_08.jpg) 20px top no-repeat}
+.mainbox .mb_content ul li dl dd{width:450px;margin:0px auto;}
+.mainbox .mb_content ul li dl dd.zsdx{height:258px;overflow:hidden;}
+.mainbox .mb_content ul li dl dd.zsdx img{float:left;width:143px;height:143px;padding:3px;margin-bottom:4px;margin-right:16px;border:1px solid #DFDFDF}
+.mainbox .mb_content ul li dl dd p{line-height:24px;color:#878383}
+.mainbox .mb_content ul li dl dd.zsdx p.info_01{height:156px;color:#878383;}
+.mainbox .mb_content ul li dl dd.zsdx p.info_02{height:104px;color:#878383}
+.mainbox .mb_content ul li dl dd.qq{height:24px;line-height:24px;}
+.mainbox .mb_content ul li dl dd strong{color:#0069DB}
+.mainbox .mb_content ul li dl dd  a.ico_bm{width:74px;height:22px;margin-left:20px}
+
+.mainbox .mb_bottom{width:100%;height:146px;float:left;background:url(../images/bg_zysz_bottom.jpg) left top no-repeat;}
+
+
+/* leftbox 开始 */
+.leftbox{width:233px;float:left;}
+.leftbox dl.leftmenu,.leftbox dl.address,.leftbox div.major,.leftbox  dl.taught{width:100%;float:left;background:url(../images/bg_leftmenu_line.jpg) left center repeat-y;}
+.leftbox dl.leftmenu dd.menu_top{height:34px;background:url(../images/bg_leftmenu_top.jpg) left top no-repeat;}
+.leftbox dl.leftmenu dd.menu_middle{background:url(../images/bg_leftmenu_middle.jpg) left top repeat-y;}
+.leftbox dl.leftmenu dd.menu_middle ul li{width:100%;background:url(../images/ico_leftmenu.jpg) 30px center no-repeat;height:28px;line-height:28px;}
+.leftbox dl.leftmenu dd.menu_middle ul li span.title{float:left;margin-left:60px;font-size:14px}
+.leftbox dl.leftmenu dd.menu_middle ul li span.cur{float:right;margin-right:20px;width:13px;height:28px;background:url(../images/ico_leftmenu_arrow.jpg) left center no-repeat;}
+.leftbox dl.leftmenu dd.menu_bottom{height:25px;background:url(../images/bg_leftmenu_bottom.jpg) left top no-repeat;}
+
+.leftbox dl.address dd a{width:100%;display:block;}
+.leftbox dl.address dd img{margin-left:4px}
+
+.leftbox div.major h2{width:100%;height:28px;background:url(../images/bg_leftmenu_zhuanye.jpg) 4px top no-repeat;}
+.leftbox div.major dl{margin-bottom:10px;margin-left:16px}
+.leftbox div.major dl dt{font-family:"微软雅黑";font-weight:bold;font-size:14px;background:url(../images/ico_square.jpg) left center no-repeat;padding-left:20px}
+.leftbox div.major dl dd ul li{width:100%;height:30px;line-height:30px;}
+.leftbox div.major dl dd ul li span.sp_txt{float:left;}
+
+.leftbox  dl.taught dt{height:28px;background:url(../images/bg_leftmenu_zhuanye-04.jpg) 4px top no-repeat}
+.leftbox  dl.taught dd{margin-left:4px}
+.leftbox  dl.taught dd a{width:100%;display:block}
+/* leftbox 结束 */
+
+/* rightbox 开始 */
+.rightbox{width:757px;margin-left:10px;float:left}
+.rightbox .location{width:100%;height:24px;line-height:24px;border-bottom:2px solid #A1D7F4;margin-bottom:10px}
+.rightbox .location a{color:#C20106}
+.rightbox table.title_list{width:100%;border-collapse:collspse;}
+.rightbox table.title_list tr.thead{background-color:#DEDEDE;font-size:14px}
+.rightbox table.title_list tr.thead td{height:28px;line-height:28px;}
+.rightbox table.title_list ul li{height:32px;line-height:32px;border-bottom:1px solid #DFDFDF}
+.rightbox table.title_list ul li a{width:100%;display:block;}
+.rightbox table.title_list ul li span.sp_title{width:80%;float:left;text-indent:1em;}
+.rightbox table.title_list ul li span.sp_date{width:20%;float:right;text-align:center}
+
+.rightbox h1.title{border-bottom: 1px solid #E5E5E5;color:#0268CC;font: 800 20px/30px "宋体",arial;margin-bottom: 6px;padding: 16px 0 8px;text-align: center;}
+.rightbox h1.title span{color: #999999;width:100%;margin-top:10px;font-size:12px;font-weight: normal;line-height: 20px;}
+.rightbox .content,.rightbox .content_page{width:100%;float:left;margin-top:10px;line-height:24px;margin-bottom:20px}
+.rightbox .content p{font-size:14px;line-height:24px;padding: 8px 0;text-align: justify;word-wrap: break-word;}
+
+/* 报名开始 */
+.rightbox .baoming{margin-left:40px}
+.rightbox .baoming strong{color:#F00}
+.rightbox .baoming p{text-indent:4em;font-size:12px}
+/* 下载开始 */
+.rightbox ul.downloads{width:100%;float:left;}
+.rightbox ul.downloads li{width:100%;float:left;height:80px;background:url(../images/bg_point.jpg) left bottom repeat-x;}
+.rightbox ul.downloads li.hover{background-color:#F4F5F5;}
+.rightbox ul.downloads li span.title{width:630px;padding-left:20px;height:80px;float:left;display:block}
+.rightbox ul.downloads li span.title h2{font-size:14px;}
+.rightbox ul.downloads li span.title h2{width:100%;float:left;height:40px;line-height:40px}
+.rightbox ul.downloads li span.title p{width:100%;float:left;height:18px;line-height:18px}
+.rightbox ul.downloads li span.downimg{width:100px;height:30px;float:right;display:block;padding:25px 0px}
+/* 校园环境开始 */
+.rightbox .img_list{width:100%;float:left;}
+.rightbox .img_list ul li{width:342px;height:280px;float:left;margin:0px 16px 16px 16px;border:1px solid #DFDFDF;}
+.rightbox .img_list ul li .photo{width:330px;height:240px;margin:6px;background-color:#DFDFE0}
+.rightbox .img_list ul li .photo a{width:100%;display:block}
+.rightbox .img_list ul li img{margin:30px 9px;width:311px;height:180px;}
+.rightbox .img_list ul li p{height:24px;line-height:24px;text-align:left;}
+.rightbox .img_list ul li p span.title{color:#0093E1;float:left;margin-left:30px;}
+.rightbox .img_list ul li p span.title2{width:210px;float:left;height:24px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* 商学院视屏 开始 */
+.videobox{width:500px;height:420px;margin:0px auto;text-align:center;}
+/* 上一篇、下一篇、相关阅读 */
+p.f14{font-size: 14px;line-height: 23px;padding: 8px 0;text-align: justify;word-wrap: break-word;}
+div.related {padding: 10px 0 0;border-top: 1px dashed #CCCCCC;margin-top: 15px;}
+div.related h5 {font-size:14px;padding-bottom: 4px;}
+div.related ul.list {color: #888888;font-family: "宋体";line-height:24px;font-size:14px}
+div.related ul.list li{line-height:24px;}
+div.related ul.list li a{color: #0B3B8C;}
+div.related ul.list li span {font-size: 12px;padding: 0 6px;}
+/* rightbox 结束 */
+
+/* 人才招聘 开始 */
+.note,.job_list{width:1000px;margin:0px auto;}
+.note{height:24px;line-height:24px;font-size:14px;color:#BB0505}
+.job_list{border: 1px solid #E4E2E2;border-collapse: collapse;width: 100%;margin-bottom:10px;}
+.job_list th{font-size:14px;background-color:#F6F6F6;border: 1px solid #E4E2E2;padding:16px 0px 16px 22px;text-align: left;vertical-align: baseline;}
+.job_list th.left_title{text-align:center;padding:0px;vertical-align:middle;width:128px;}
+.job_list td{background-color:#FFFFFF;border: 1px solid #E4E2E2;padding:16px 0px 16px 22px;vertical-align: text-top;line-height:24px;font-size:14px}
+.job_list th span.sp_red{font-weight:bold;color:#F00}
+/* mainbox 结束 */
+
+/* 分页 开始 */
+#pages { padding:14px 0 10px; font-family:å®‹ä½“ }
+#pages a { display:inline-block; height:22px; line-height:22px; background:#fff; border:1px solid #e3e3e3; text-align:center; color:#333; padding:0 10px}
+#pages a.a1 { background:url(../images/admin_img/pages.png) no-repeat 0 5px; width:56px; padding:0 }
+#pages a:hover { background:#f1f1f1; color:#000; text-decoration:none }
+#pages span { display:inline-block; height:22px; line-height:22px; background:#5a85b2; border:1px solid #5a85b2; color:#fff; text-align:center;padding:0 10px}
+.page .noPage { display:inline-block; width:56px; height:22px; line-height:22px; background:url(../img/icu/titleBg.png) repeat-x 0 -55px ; border:1px solid #e3e3e3; text-align:center; color:#a4a4a4; }
+/* 分页 结束 */
+
+
+/* footbox 开始 */
+.footbox{width:1000px;margin:0px auto;height:146px;background:url(../images/bg_footbox.jpg) -1px top no-repeat;}
+dl.partners{float:left;margin-top:30px;margin-left:14px}
+dl.partners dt span.title{padding-left:20px}
+dl.partners dd ul li{float:left;width:118px;height:56px;margin-right:4px}
+dl.partners dd ul li a{width:100%;display:block;}
+dl.partners dd ul li img{width:118px;height:56px;}
+
+ul.footmenu,ul.footmenu2{width:100%;float:left;margin-top:7px}
+ul.footmenu li,ul.footmenu2 li{height:28px;line-height:28px;float:left;margin:0px 17px}
+ul.footmenu li a,ul.footmenu2 li a{width:100%;display:block;font-size:14px;color:#FFF}
+
+ul.footmenu2{width:100%;height:30px;background:url(../images/bg_foot_menu.jpg) left top repeat-x;}
+/* footbox 结束 */

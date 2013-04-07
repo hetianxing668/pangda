@@ -1,358 +1,439 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=7" />
-<title>PHPCMS演示站</title>
-<meta name="keywords" content="PHPCMS演示站">
-<meta name="description" content="PHPCMS演示站">
-<link href="http://localhost.pangda.com/statics/css/reset.css" rel="stylesheet" type="text/css" />
-<link href="http://localhost.pangda.com/statics/css/default_blue.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="http://localhost.pangda.com/statics/js/jquery.min.js"></script>
-<script type="text/javascript" src="http://localhost.pangda.com/statics/js/jquery.sgallery.js"></script>
-<script type="text/javascript" src="http://localhost.pangda.com/statics/js/search_common.js"></script>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>庞大汽车商学院</title>
+	<meta name="keywords" content="庞大汽车商学院"/>
+	<meta name="description" content="庞大汽车商学院"/>
+	<link rel="stylesheet" type="text/css" href="/statics/pangda/css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="/statics/pangda/css/index.css"/>
+	<script type="text/javascript" src="/statics/pangda/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/statics/pangda/js/jquery.SuperSlide.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var tab_title = $(".tab_title ul").find("li");
+		var tab_content = $(".tab_content").find("ul");
+		Tabchange(tab_title,tab_content);
+		var menu_title = $(".menu_title").find("li");
+		var menu_content = $(".menu_content").find("li");
+		Tabchange(menu_title,menu_content);
+	});
+	//选项卡切换
+	function Tabchange(menu,content)
+	{
+		menu.each(function(i){
+			menu.eq(i).hover(function(){
+				menu.removeClass("hover");
+				menu.eq(i).addClass("hover");
+				content.hide();
+				content.eq(i).show();
+			});
+		});
+	}
+	</script>
 </head>
 <body>
-<div class="body-top">
-    <div class="content">
-        		<div id="announ">
-                 <ul>
-                                  </ul>
-            </div>
-     	 <script type="text/javascript">
-$(function(){
-	startmarquee('announ',22,1,500,3000);
-})
-</script>
-            <div class="login lh24 blue"><a href="http://localhost.pangda.com/index.php?m=content&c=rss&siteid=1" class="rss ib">rss</a><span class="rt"><script type="text/javascript">document.write('<iframe src="http://localhost.pangda.com/index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid=1" allowTransparency="true"  width="500" height="24" frameborder="0" scrolling="no"></iframe>')</script></span></div>
-    </div>
+	<!-- 头部开始 -->
+<div class="top fixed">
+	<a href="http://localhost.pangda.com" class="logo"></a>
+	<ul class="topmenu">
+		<li><a href="http://localhost.pangda.com/html/about/gywm/" class="topmenu">关于我们</a>&nbsp;|&nbsp;<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=20" class="topmenu">人才招聘</a></li>
+	</ul>
 </div>
-<div class="header">
-	<div class="logo"><a href="http://localhost.pangda.com/"><img src="http://localhost.pangda.com/statics/images/v9/logo.jpg" /></a></div>
+<!-- 头部结束 -->
 
-    <div class="search">
-    	<div class="tab" id="search">
-																<a href="javascript:;" onclick="setmodel(53, $(this));" style="outline:medium none;" hidefocus="true"  class="on" >专业设置</a><span> | </span>										<a href="javascript:;" onclick="setmodel(54, $(this));" style="outline:medium none;" hidefocus="true" >名师风采</a><span> | </span>										<a href="javascript:;" onclick="setmodel(55, $(this));" style="outline:medium none;" hidefocus="true" >校友会</a><span> | </span>										<a href="javascript:;" onclick="setmodel(56, $(this));" style="outline:medium none;" hidefocus="true" >开班信息</a><span> | </span>										<a href="javascript:;" onclick="setmodel(57, $(this));" style="outline:medium none;" hidefocus="true" >商学院视频</a><span> | </span>										<a href="javascript:;" onclick="setmodel(58, $(this));" style="outline:medium none;" hidefocus="true" >客服在线</a><span> | </span>										<a href="javascript:;" onclick="setmodel(59, $(this));" style="outline:medium none;" hidefocus="true" >人才招聘</a><span> | </span>										<a href="javascript:;" onclick="setmodel(60, $(this));" style="outline:medium none;" hidefocus="true" >合作企业</a><span> | </span>										<a href="javascript:;" onclick="setmodel(61, $(this));" style="outline:medium none;" hidefocus="true" >就业明星</a><span> | </span>										<a href="javascript:;" onclick="setmodel(1, $(this));" style="outline:medium none;" hidefocus="true" >新闻</a><span> | </span>										<a href="javascript:;" onclick="setmodel(3, $(this));" style="outline:medium none;" hidefocus="true" >图片</a><span> | </span>										<a href="javascript:;" onclick="setmodel(2, $(this));" style="outline:medium none;" hidefocus="true" >下载</a><span> | </span>										<a href="javascript:;" onclick="setmodel(52, $(this));" style="outline:medium none;" hidefocus="true" >专题</a>								</div>
-
-        <div class="bd">
-            <form action="http://localhost.pangda.com/index.php" method="get" target="_blank">
-				<input type="hidden" name="m" value="search"/>
-				<input type="hidden" name="c" value="index"/>
-				<input type="hidden" name="a" value="init"/>
-				<input type="hidden" name="typeid" value="53" id="typeid"/>
-				<input type="hidden" name="siteid" value="1" id="siteid"/>
-                <input type="text" class="text" name="q" id="q"/><input type="submit" value="搜 索" class="button" />
-            </form>
-        </div>
-    </div>
-
-    <div class="banner"><script language="javascript" src="http://localhost.pangda.com/index.php?m=poster&c=index&a=show_poster&id=1"></script></div>
-    <div class="bk3"></div>
-    <div class="nav-bar">
-    	<map>
-    	        	<ul class="nav-site">
-			<li><a href="http://localhost.pangda.com"><span>首页</span></a></li>
-						<li class="line">|</li>
-			<li><a href="http://localhost.pangda.com/html/about/"><span>学校概况</span></a></li>
-						<li class="line">|</li>
-			<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=6"><span>专业设置</span></a></li>
-						<li class="line">|</li>
-			<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=8"><span>名师风采</span></a></li>
-						<li class="line">|</li>
-			<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=9"><span>院校合作</span></a></li>
-						<li class="line">|</li>
-			<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=10"><span>校园环境</span></a></li>
-						<li class="line">|</li>
-			<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=11"><span>战略合作</span></a></li>
-						<li class="line">|</li>
-			<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=12"><span>证书查询</span></a></li>
-						<li class="line">|</li>
-			<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=13"><span>资料下载</span></a></li>
-						<li class="line">|</li>
-			<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=14"><span>网上报名</span></a></li>
-			            </ul>
-        		        </map>
-    </div> 
+<!-- 导航开始 -->
+<div class="menu fixed">
+<ul>
+	<li><a href="http://localhost.pangda.com">网站首页</a></li>
+	<li><a href="http://localhost.pangda.com/html/about/">学校概况</a></li>
+	<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=6">专业设置</a></li>
+	<li><a href="http://localhost.pangda.com/html/about/jyfp/">就业分配</a></li>
+	<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=8">名师风采</a></li>
+	<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=9">院校合作</a></li>
+	<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=10">校园环境</a></li>
+	<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=11">战略合作</a></li>
+	<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=12">证书查询</a></li>
+	<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=13">资料下载</a></li>
+	<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=14">网上报名</a></li>
+</ul>
+</div>
+<!-- 导航结束 -->	
+	<!-- 幻灯片开始 -->
+	<div class="slider fixed">
+		<div class="flashnews">
+		 <!-- size: 831px * 320px -->
+	   <script language='javascript'>
+		linkarr = new Array();
+		picarr = new Array();
+		textarr = new Array();
+		var swf_width=831;
+		var swf_height=320;
+		//文字颜色|文字位置|文字背景颜色|文字背景透明度|按键文字颜色|按键默认颜色|按键当前颜色|自动播放时间|图片过渡效果|是否显示按钮|打开方式
+		var configtg='0xffffff||0x3FA61F|5|0xffffff|0xC5DDBC|0x000033|2|3|1|_blank';
+		var files = "";
+		var links = "";
+		var texts = "";
+		//这里设置调用标记
+		/*{dede:arclist flag='f' row='5'}
+		linkarr[[field:global.autoindex/]] = "[field:arcurl/]";
+		picarr[[field:global.autoindex/]]  = "[field:litpic/]";
+		textarr[[field:global.autoindex/]] = "[field:title function='html2text(@me)'/]";
+		{/dede:arclist}*/
+		linkarr[1] = "#";
+		picarr[1]  = "/statics/pangda/images/img_slider.jpg";
+		textarr[1] = "";
+		linkarr[2] = "#";
+		picarr[2]  = "/statics/pangda/images/img_slider.jpg";
+		textarr[2] = "";
+		linkarr[3] = "#";
+		picarr[3]  = "/statics/pangda/images/img_slider.jpg";
+		textarr[3] = "";
+		
+		for(i=1;i<picarr.length;i++){
+		if(files=="") files = picarr[i];
+		else files += "|"+picarr[i];
+		}
+		for(i=1;i<linkarr.length;i++){
+		if(links=="") links = linkarr[i];
+		else links += "|"+linkarr[i];
+		}
+		for(i=1;i<textarr.length;i++){
+		if(texts=="") texts = textarr[i];
+		else texts += "|"+textarr[i];
+		}
+		document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
+		document.write('<param name="movie" value="/statics/pangda/images/bcastr3.swf"><param name="quality" value="high">');
+		document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+		document.write('<param name="FlashVars" value="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'&bcastr_config='+configtg+'">');
+		document.write('<embed src="/statics/pangda/images/bcastr3.swf" wmode="opaque" FlashVars="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'&bcastr_config='+configtg+'&menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>');
+		</script>
+		</div>
+		<div class="rmenu">
+		<ul>
+			<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=43"><img src="/statics/pangda/images/bg_senior_school.jpg" alt="" /></a></li>
+			<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=44"><img src="/statics/pangda/images/bg_secondary_school.jpg" alt="" /></a></li>
+			<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=45"><img src="/statics/pangda/images/bg_university_school.jpg" alt="" /></a></li>
+			<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=46"><img src="/statics/pangda/images/bg_incumbents_school.jpg" alt="" /></a></li>
+			<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=47"><img src="/statics/pangda/images/bg_qualifications_school.jpg" alt="" /></a></li>
+		</ul>
+		</div>
+	</div>
+	<!-- 幻灯片结束 -->
+	
+	<!-- box_1开始 -->
+	<div class="box_1 fixed">
+		<div class="order fixed">
+			  
+						<dl>
+				<dt>奔驰订单班</dt>
+				<dd>
+				<ul>
+										 
+										<li><span class="sp_txt">汽车检测与运营工程师[技能+大专]</span><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=14">预约报名</a><span class="sp_red">100</span></li>
+										<li><span class="sp_txt">汽车检测与运营工程师[技能+中专]</span><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=14">预约报名</a><span class="sp_red">100</span></li>
+										<li><span class="sp_txt">汽车商务与管理[2+1大中专连读]</span><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=14">预约报名</a><span class="sp_red">100</span></li>
+										<li><span class="sp_txt">汽车检测与维修高级技师[实训+技能]</span><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=14">预约报名</a><span class="sp_red">100</span></li>
+										 
+				</ul>
+				</dd>
+			</dl>
+						<dl>
+				<dt>奥迪订单班</dt>
+				<dd>
+				<ul>
+										 
+										<li><span class="sp_txt">汽车4S维修高级技师[一年纯技能]</span><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=14">预约报名</a><span class="sp_red">100</span></li>
+										 
+				</ul>
+				</dd>
+			</dl>
+						<dl>
+				<dt>斯巴鲁订单班</dt>
+				<dd>
+				<ul>
+										 
+										<li><span class="sp_txt">汽车4S维修高级技师[一年纯技能]</span><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=14">预约报名</a><span class="sp_red">100</span></li>
+										<li><span class="sp_txt">汽车维修与运营工程师[技能+中专]</span><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=14">预约报名</a><span class="sp_red">100</span></li>
+										 
+				</ul>
+				</dd>
+			</dl>
+						<dl>
+				<dt>商学院高级创业班</dt>
+				<dd>
+				<ul>
+										 
+										 
+				</ul>
+				</dd>
+			</dl>
+						 
+			
+		</div>
+		<div class="box_1_1">
+		<div class="news fixed">
+		<dl>
+			<dt></dt>
+			<dd class="tab_title fixed">
+			<ul>
+				<li class="hover"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=22">学校新闻</a></li>
+				<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=23">就业喜报</a></li>
+				<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=24">媒体报道</a></li>
+			</ul>
+			</dd>
+			<dd class="tab_content fixed">
+								<ul>
+										<li><span class="title"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=22&id=120" target="_blank" title="【爱哈密网】山东万通：学习为就业，就业靠技能">[学校新闻]【爱哈密网】山东万通：学习为就业，就业靠技能</a></span><span class="date">2013-03-30</span></li>
+										<li><span class="title"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=22&id=119" target="_blank" title="国内顶级汽修专家阚有波专场讲座即将开启">[学校新闻]国内顶级汽修专家阚有波专场讲座即将开启</a></span><span class="date">2013-03-30</span></li>
+										<li><span class="title"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=22&id=118" target="_blank" title="奋斗人生，因梦想而精彩">[学校新闻]奋斗人生，因梦想而精彩</a></span><span class="date">1970-01-01</span></li>
+										<li><span class="title"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=22&id=117" target="_blank" title="四新特色之新理念：以生为本促发展">[学校新闻]四新特色之新理念：以生为本促发展</a></span><span class="date">1970-01-01</span></li>
+									</ul>
+												<ul style="display:none">
+										<li><span class="title"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=23&id=200" target="_blank" title="【泸州网】热烈祝贺山东万通被评为济南市职业技能培训定点机构">[就业喜报]【泸州网】热烈祝贺山东万通被评为济南市职业技能培训定点机构</a></span><span class="date">1970-01-01</span></li>
+										<li><span class="title"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=23&id=199" target="_blank" title="【中国企业新闻网】就业好招生难 看山东万通如何度过发展瓶颈">[就业喜报]【中国企业新闻网】就业好招生难 看山东万通如何度过发展瓶颈</a></span><span class="date">1970-01-01</span></li>
+										<li><span class="title"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=23&id=198" target="_blank" title="【中国企业新闻网】客座教授唐祖谦为万通学子进行创业培训">[就业喜报]【中国企业新闻网】客座教授唐祖谦为万通学子进行创业培训</a></span><span class="date">1970-01-01</span></li>
+										<li><span class="title"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=23&id=197" target="_blank" title="找工作 实力比长相更重要">[就业喜报]找工作 实力比长相更重要</a></span><span class="date">1970-01-01</span></li>
+									</ul>
+												<ul style="display:none">
+										<li><span class="title"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=24&id=180" target="_blank" title="【中国产经网】汽车保养攻略 如何用最少的钱办最多的事">[媒体报道]【中国产经网】汽车保养攻略 如何用最少的钱办最多的事</a></span><span class="date">1970-01-01</span></li>
+										<li><span class="title"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=24&id=179" target="_blank" title="汽车知识讲堂：盘点常见的汽车伪故障">[媒体报道]汽车知识讲堂：盘点常见的汽车伪故障</a></span><span class="date">1970-01-01</span></li>
+										<li><span class="title"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=24&id=178" target="_blank" title="雨后爱车保养 专家来支招">[媒体报道]雨后爱车保养 专家来支招</a></span><span class="date">1970-01-01</span></li>
+										<li><span class="title"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=24&id=177" target="_blank" title="【汉网】学热门汽修 实现更高质量就业">[媒体报道]【汉网】学热门汽修 实现更高质量就业</a></span><span class="date">1970-01-01</span></li>
+									</ul>
+							</dd>
+		</dl>
+		</div>
+		<div class="map fixed">
+		<dl>
+			<dt></dt>
+			<dd class="map_content">
+			<img src="/statics/pangda/images/img_map.jpg" alt="" />
+			</dd>
+		</dl>
+		</div>
+		</div>
+		<div class="box_1_2">
+		<div class="contact fixed">
+		<dl>
+			<dt class="title"></dt>
+			<dd><img src="/statics/pangda/images/img_tel.jpg" alt="" /></dd>
+			<dd><img src="/statics/pangda/images/img_address.jpg" alt="" /></dd>
+		</dl>
+		</div>
+		<div class="star">
+		<dl>
+			<dt></dt>
+			<dd class="starbox">
+								<div class="starbox_roll">
+				<ul>
+										<li><a href="javascript:void(0);">恭喜4S应用专业 涂某某 成功就业</a></li>
+										<li><a href="javascript:void(0);">恭喜4S应用专业 陈某某 成功就业</a></li>
+										<li><a href="javascript:void(0);">恭喜4S应用专业 朱某某 成功就业</a></li>
+										<li><a href="javascript:void(0);">恭喜4S应用专业 吴某某 成功就业</a></li>
+										<li><a href="javascript:void(0);">恭喜4S应用专业 赖某某 成功就业</a></li>
+										<li><a href="javascript:void(0);">恭喜4S应用专业 谭某某 成功就业</a></li>
+										<li><a href="javascript:void(0);">恭喜4S应用专业 于某某 成功就业</a></li>
+										<li><a href="javascript:void(0);">恭喜4S应用专业 孙某某 成功就业</a></li>
+										<li><a href="javascript:void(0);">恭喜4S应用专业 钱某某 成功就业</a></li>
+										<li><a href="javascript:void(0);">恭喜4S应用专业 赵某某 成功就业</a></li>
+										<li><a href="javascript:void(0);">恭喜4S应用专业 张某某 成功就业</a></li>
+										<li><a href="javascript:void(0);">恭喜4S应用专业 王某某 成功就业</a></li>
+										<li><a href="javascript:void(0);">恭喜4S应用专业 李某某 成功就业</a></li>
+									</ul>
+				</div>
+							</dd>
+			<script type="text/javascript">
+			jQuery(".starbox").slide({mainCell:".starbox_roll ul",autoPlay:true,effect:"topMarquee",vis:4,interTime:50});
+			</script>
+		</dl>
+		</div>
+		</div>
+	</div>
+	<!-- box_1结束 -->
+	
+	<!-- box_2开始 -->
+	<div class="box_2 fixed">
+	<div class="box_2_1">
+	<dl>
+		<dt class="fixed"><span class="title diamond">关于我们</span><a href="http://localhost.pangda.com/html/about/gywm/" class="more">更多&gt;&gt;</a></dt>
+		<dd>
+		<p><img src="/statics/pangda/images/img_about_index.jpg" alt="" /></p>
+		<p><a href="http://localhost.pangda.com/html/about/gywm/" class="title">庞大中锐汽车学院</a></p>
+<p class="content">庞大中锐汽车学院是庞大汽贸集团与中锐教育集团携手打造的国际化、现代化、企业化的汽车服务人才培养基地，实施订单招生、定向培养、定岗就业，为庞大汽贸集团等国内大型汽车经销商集团...</p>
+		</dd>
+	</dl>
+	</div>
+	<div class="box_2_2">
+	<dl>
+		<dt class="fixed"><span class="title diamond">精彩图片</span><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=31" class="more">更多&gt;&gt;</a></dt>
+		<dd class="content">
+			<ul class="menu_title">
+				<li class="hover"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=32" title="">学习环境</a></li>
+				<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=33" title="">生活环境</a></li>
+				<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=34" title="">校园活动</a></li>
+				<li style="border-bottom:0px"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=35" title="">实训设备</a></li>
+			</ul>
+			<ul class="menu_content">
+												<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=10&id=1"><img src="http://localhost.pangda.com/uploadfile/2013/0401/img_school_1.jpg" alt="教学楼一角" title="教学楼一角"/></a></li>
+																				<li style="display:none"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=10&id=3"><img src="http://localhost.pangda.com/uploadfile/2013/0401/img_school_3.jpg" alt="校园小花园" title="校园小花园"/></a></li>
+																				<li style="display:none"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=10&id=2"><img src="http://localhost.pangda.com/uploadfile/2013/0401/img_school_2.jpg" alt="展厅一角" title="展厅一角"/></a></li>
+																				<li style="display:none"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=10&id=4"><img src="http://localhost.pangda.com/uploadfile/2013/0401/img_school_4.jpg" alt="理论授课教室" title="理论授课教室"/></a></li>
+											</ul>
+		</dd>
+	</dl>
+	</div>
+	<div class="box_2_3">
+	<dl>
+		<dt class="fixed"><span class="title diamond">商学院视频</span><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=36" class="more">更多&gt;&gt;</a></dt>
+		<dd class="video">
+						<embed src="http://player.youku.com/player.php/sid/XMzAwMDgzNDQw/v.swf" allowFullScreen="true" quality="high" width="240" height="164" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+						</dd>
+		<dd class="title">
+						<ul>
+								<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=36&id=5">长城汽车企业宣传片</a></li>
+								<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=36&id=4">汽车行业世界500强日本企业考察高级研修班</a></li>
+								<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=36&id=3">庞大集团落户沈阳大浑南 即将隆重登场</a></li>
+								<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=36&id=2">承德庞大汽车城我的工作单位</a></li>
+							</ul>
+					</dd>
+	</dl>
+	</div>
 	
 	</div>
-</div><!--main-->
-<div class="main">
-	<div class="col-left">
-    	<div class="news-hot">
-        	<div class="content">
-        	        	   
-                
-            </div>
-        </div>
-        <div class="slide">
-            <div class="FocusPic">
-                        	<div class="content" id="main-slide">
-                    <div class="changeDiv">  
-                                        </div>
-                </div>
-                        </div>
-            <div class="bk10"></div>
-        	<div class="box extend">
-            	<div class="col-left">争议</div>
-                <div class="col-auto">
-								</div>
-                <script language="javascript" src="http://localhost.pangda.com/caches/poster_js/10.js"></script>
-            </div>
-        </div>
-        <div class="bk10"></div>
-        <div class="box">
-        		<h5>图片新闻</h5>
-                      <ul class="content news-photo picbig">
-                         </ul>
-                    </div>
-        <div class="bk10"></div>
-                        <div class="box cat-area" style=" margin-right:10px">
-        		<h5 class="title-1">专业设置<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=6" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        		                <div class="box cat-area" >
-        		<h5 class="title-1">名师风采<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=8" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        <div class="bk10"></div>		                <div class="box cat-area" style=" margin-right:10px">
-        		<h5 class="title-1">院校合作<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=9" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        		                <div class="box cat-area" >
-        		<h5 class="title-1">校园环境<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=10" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        <div class="bk10"></div>		                <div class="box cat-area" style=" margin-right:10px">
-        		<h5 class="title-1">战略合作<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=11" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        		                <div class="box cat-area" >
-        		<h5 class="title-1">证书查询<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=12" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        <div class="bk10"></div>		                <div class="box cat-area" style=" margin-right:10px">
-        		<h5 class="title-1">资料下载<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=13" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        		                <div class="box cat-area" >
-        		<h5 class="title-1">网上报名<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=14" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        <div class="bk10"></div>		                <div class="box cat-area" style=" margin-right:10px">
-        		<h5 class="title-1">人才招聘<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=20" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        		                <div class="box cat-area" >
-        		<h5 class="title-1">新闻动态<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=21" class="more">更多>></a></h5>
-             <div class="content">
-                                       	<p>
-             		<img src="http://localhost.pangda.com/statics/images/nopic.gif" width="90" height="60"/>
-                    <strong><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=22&id=200" target="_blank" title="【泸州网】热烈祝贺山东万通被评为济南市职业技能培训定点机构" style="" >【泸州网】热烈...</a></strong><br />
-
-
-
- 近年来，山东万通汽修学校在各级领导的关心和支持下，取得了...                </p>
-                                            
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                	<li>·<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=22&id=200" target="_blank" title="【泸州网】热烈祝贺山东万通被评为济南市职业技能培训定点机构" style="" >【泸州网】热烈祝贺山东...</a></li>
-                                	<li>·<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=22&id=199" target="_blank" title="【中国企业新闻网】就业好招生难 看山东万通如何度过发展瓶颈" style="" >【中国企业新闻网】就业...</a></li>
-                                	<li>·<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=22&id=198" target="_blank" title="【中国企业新闻网】客座教授唐祖谦为万通学子进行创业培训" style="" >【中国企业新闻网】客座...</a></li>
-                                	<li>·<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=22&id=197" target="_blank" title="找工作 实力比长相更重要" style="" >找工作 实力比长相更重要</a></li>
-                                	<li>·<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=22&id=196" target="_blank" title="2013 万通7大新专业成就汽修行业新贵" style="" >2013 万通7大新专业成就...</a></li>
-                                </ul>
-                            </div>
-        </div>
-        <div class="bk10"></div>		                <div class="box cat-area" style=" margin-right:10px">
-        		<h5 class="title-1">开班信息<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=26" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        		                <div class="box cat-area" >
-        		<h5 class="title-1">精彩图片<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=31" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        <div class="bk10"></div>		                <div class="box cat-area" style=" margin-right:10px">
-        		<h5 class="title-1">商学院视频<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=36" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        		                <div class="box cat-area" >
-        		<h5 class="title-1">校友会<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=37" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        <div class="bk10"></div>		                <div class="box cat-area" style=" margin-right:10px">
-        		<h5 class="title-1">合作企业<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=38" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        		                <div class="box cat-area" >
-        		<h5 class="title-1">就业明星<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=39" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        <div class="bk10"></div>		    </div>
-    <div class="col-auto">
-    	<div class="box">
-        	 <h5 class="title-2">公告<a href="" class="more">&nbsp;</a></h5>
-             <div class="content">
-                                <ul class="list lh24 f14">
-                                   </ul>
-                            </div>
-        </div>
-        <div class="bk10"></div>
-        <div class="box">
-        	<h5 class="title-2">专题<a href="http://localhost.pangda.com/index.php?m=special&c=index&a=special&siteid=1" class="more">更多>></a></h5>
-            <div class="content special">
-                                                </div>
-        </div>
-        <div class="bk10"></div>
-        <div class="box">
-            <h5 class="title-2"><span class="rt fn f12 tab SwapTab"><span class="fb">热点</span> | <span >评论</span> | <span>关注</span></span>排行</h5>
-            <div class="tab-content">
-            <ul class="content digg">
-										            </ul>
-            <ul class="content digg hidden">
-										            </ul>
-            <ul class="content digg hidden">
-										            </ul>
-            </div>
-        </div><div class="bk10"></div>
-        <div class="box">
-            <h5 class="title-2">调查问卷<a href="http://localhost.pangda.com/index.php?m=vote&c=index&siteid=1" class="more">更多>></a></h5>
- 
-<script language="javascript" src="http://localhost.pangda.com/index.php?m=vote&c=index&a=show&action=js&subjectid=1&type=3"></script>
-        </div>
-    </div>
-    <div class="bk10"></div>
+	<!-- box_2结束 -->
 	
-	<div class="box blogroll ylink">
-    	<h5><a href="http://localhost.pangda.com/index.php?m=link&siteid=1" hidefocus="true" class="rt">更多>></a>友情链接<a href="http://localhost.pangda.com/index.php?m=link&c=index&a=register&siteid=1" class="red">申请链接</a></h5>
-        <div class="bk10"></div>
-	<ul class="colli imgul">
-                        <li><a href="http://www.phpcms.cn" title="PHPCMS" target="_blank"><img src="http://www.phpcms.cn/images/logo_88_31.gif" width="88" height="31" /></a></li>
-                <li><a href="http://www.sdo.com" title="盛大在线" target="_blank"><img src="http://www.snda.com/cn/logo/comp_logo_sdo.gif" width="88" height="31" /></a></li>
-                    </ul>
-          <div class="bk10"></div>
-	<div class="linka">
-		 	</div>
+	<!-- qqbox 开始 -->
+	<div class="qqbox">
+	<ul>
+						<li>庞锐商学院学费 <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=88888888&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:88888888:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a></li>
+				<li>庞锐商学院课程 <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=77777777&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:77777777:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a></li>
+				<li>庞锐商学院就业 <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=66666666&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:66666666:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a></li>
+				<li>庞锐商学院师资 <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=22222222&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:22222222:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a></li>
+				<li>庞锐商学院认证 <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=99999999&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:99999999:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a></li>
+						
+	</ul>
 	</div>
-</div>
-<script type="text/javascript"> 
-$(function(){
-	new slide("#main-slide","cur",310,260,1);//焦点图
-	new SwapTab(".SwapTab","span",".tab-content","ul","fb");//排行TAB
-})
-</script>
-<div class="footer">
-<p class="info">
-<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=15" target="_blank">学校概况</a> |  
-<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=16" target="_blank">庞大荣誉</a> |  
-<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=17" target="_blank">领导关怀</a> |  
-<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=7" target="_blank">就业分配</a> |  
-<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=25" target="_blank">关于我们</a> |  
-<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=18" target="_blank">庞大4S店图片</a> |  
-<a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=19" target="_blank">庞大汽车产业文化园</a> |  
-<a href="http://localhost.pangda.com/index.php?m=link" target="_blank">友情链接</a>
-<br />
-Powered by <strong><a href="http://www.phpcms.cn" target="_blank">PHPCMS</a></strong> <em>V9.3.1</em> &copy; 2011 <img src="http://localhost.pangda.com/statics/images/copyright.gif"/></p>
-</div>
-<script type="text/javascript">
-$(function(){
-	$(".picbig").each(function(i){
-		var cur = $(this).find('.img-wrap').eq(0);
-		var w = cur.width();
-		var h = cur.height();
-	   $(this).find('.img-wrap img').LoadImage(true, w, h,'http://localhost.pangda.com/statics/images/msg_img/loading.gif');
-	});
-})
-</script>
+	<!-- qqbox 结束 -->
+	
+	<!-- box_3开始 -->
+	<div class="box_3 fixed">
+		<div class="box_3_1">
+		<dl>
+			<dt class="fixed"><span class="title diamond">就业分配</span><a href="http://localhost.pangda.com/html/about/jyfp/" class="more">更多&gt;&gt;</a></dt>
+			<dd>
+			<img src="/statics/pangda/images/img_map_jyfp.jpg" alt="" />
+			</dd>
+		</dl>
+		</div>
+		<div class="box_3_2">
+		<dl>
+			<dt class="fixed"><span class="title diamond">名师风采</span><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=8" class="more">更多&gt;&gt;</a></dt>
+						<dd>
+						<ul class="dashed">
+				<li class="photo"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=8&id=1"><img src="http://localhost.pangda.com/uploadfile/2013/0401/img_teacher_1.jpg" alt="曹伟鹏" /></a></li>
+				<li class="info">
+					<p>姓名：曹伟鹏</p>
+					<p>专业特长：汽车基础底盘</p>
+					<p>教学理念：夫君子之行，静以修身，俭以养德，非淡泊无以明志，非宁静无以致远。</p>
+				</li>
+			</ul>
+						<ul class="dashed">
+				<li class="photo"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=8&id=2"><img src="http://localhost.pangda.com/uploadfile/2013/0401/img_teacher_2.jpg" alt="付文立" /></a></li>
+				<li class="info">
+					<p>姓名：付文立</p>
+					<p>专业特长：汽车美容</p>
+					<p>教学理念：因材施教，按照企业标准培养学生，为学生的发展铺路搭桥。</p>
+				</li>
+			</ul>
+						</dd>
+					</dl>
+		</div>
+		<div class="box_3_3">
+		<dl>
+			<dt class="fixed"><span class="title diamond">校友会</span><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=37" class="more">更多&gt;&gt;</a></dt>
+						<dd>
+						<ul class="dashed">
+				<li class="photo"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=37&id=1"><img src="http://localhost.pangda.com/uploadfile/2013/0401/img_student_1.jpg" alt="李令涛" /></a></li>
+				<li class="info">
+					<p>姓名：李令涛</p>
+					<p>专业：汽车装具美容</p>
+					<p>毕业时间：2010-06-20</p>
+				</li>
+				<li>单位：洗洗就发汽车美容护理会所</li>
+			</ul>
+						<ul class="dashed">
+				<li class="photo"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=37&id=2"><img src="http://localhost.pangda.com/uploadfile/2013/0401/img_student_2.jpg" alt="张雪松" /></a></li>
+				<li class="info">
+					<p>姓名：张雪松</p>
+					<p>专业：车装具美容</p>
+					<p>毕业时间：2010-06-20</p>
+				</li>
+				<li>单位：洗洗就发汽车美容护理会所</li>
+			</ul>
+						</dd>
+					</dl>
+		</div>
+	</div>
+	<!-- box_3结束 -->
+	
+	<!-- box_4开始 -->
+	<div class="box_4 fixed">
+	<div class="rollbox">
+		<ul class="school_view">
+				<li><div class="pic"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=10&id=1"><img src="http://localhost.pangda.com/uploadfile/2013/0401/thumb_158_104_img_school_1.jpg" alt="教学楼一角" /></a></div><div class="title"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=10&id=1">教学楼一角</a></div></li>
+				<li><div class="pic"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=10&id=2"><img src="http://localhost.pangda.com/uploadfile/2013/0401/thumb_158_104_img_school_2.jpg" alt="展厅一角" /></a></div><div class="title"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=10&id=2">展厅一角</a></div></li>
+				<li><div class="pic"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=10&id=3"><img src="http://localhost.pangda.com/uploadfile/2013/0401/thumb_158_104_img_school_3.jpg" alt="校园小花园" /></a></div><div class="title"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=10&id=3">校园小花园</a></div></li>
+				<li><div class="pic"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=10&id=4"><img src="http://localhost.pangda.com/uploadfile/2013/0401/thumb_158_104_img_school_4.jpg" alt="理论授课教室" /></a></div><div class="title"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=10&id=4">理论授课教室</a></div></li>
+				<li><div class="pic"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=10&id=5"><img src="http://localhost.pangda.com/uploadfile/2013/0401/thumb_158_104_img_school_5.jpg" alt="理论授课教室" /></a></div><div class="title"><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=10&id=5">理论授课教室</a></div></li>
+			</ul>
+		</div>
+	<script type="text/javascript">
+	jQuery(".box_4").slide({mainCell:".rollbox ul",autoPlay:true,effect:"leftMarquee",vis:5,interTime:50});
+	</script>
+	
+	<dl class="partners fixed">
+		<dt><span class="title diamond">合作企业</span></dt>
+		<dd class="fixed">
+				<ul>
+						<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=38&id=1"><img src="http://localhost.pangda.com/uploadfile/2013/0401/img_company_1.jpg" alt="奔驰" /></a></li>
+						<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=38&id=2"><img src="http://localhost.pangda.com/uploadfile/2013/0401/img_company_2.jpg" alt="奥迪" /></a></li>
+						<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=38&id=3"><img src="http://localhost.pangda.com/uploadfile/2013/0401/img_company_3.jpg" alt="阿斯顿马丁" /></a></li>
+						<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=38&id=4"><img src="http://localhost.pangda.com/uploadfile/2013/0401/img_company_4.jpg" alt="巴博斯" /></a></li>
+						<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=38&id=5"><img src="http://localhost.pangda.com/statics/images/nopic.gif" alt="雷克萨斯" /></a></li>
+						<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=38&id=6"><img src="http://localhost.pangda.com/uploadfile/2013/0401/img_company_6.jpg" alt="讴歌" /></a></li>
+						<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=38&id=7"><img src="http://localhost.pangda.com/uploadfile/2013/0401/img_company_7.jpg" alt="捷豹" /></a></li>
+						<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=show&catid=38&id=8"><img src="http://localhost.pangda.com/uploadfile/2013/0401/img_company_8.jpg" alt="路虎" /></a></li>
+					</ul>
+				</dd>
+	</dl>
+	<ul class="footmenu fixed">
+		<li><a href="http://localhost.pangda.com">网站首页</a></li>
+		<li><a href=""></a></li>
+		<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=6">专业设置</a></li>
+		<li><a href="http://localhost.pangda.com/html/about/jyfp/">就业分配</a></li>
+		<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=8">名师风采</a></li>
+		<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=9">院校合作</a></li>
+		<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=10">校园环境</a></li>
+		<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=11">战略合作</a></li>
+		<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=12">证书查询</a></li>
+		<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=13">资料下载</a></li>
+		<li><a href="http://localhost.pangda.com/index.php?m=content&c=index&a=lists&catid=14">网上报名</a></li>
+	</ul>
+	</div>
+	<!-- box_4结束 -->
+	<!-- 友情链接 开始 -->
+	<div class="flink fixed">
+		<ul>
+		<li><strong>友情链接：</strong><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a><a href="#">庞大教育</a></dd>
+		</li>
+		</ul>
+	</div>
+	<!-- 友情链接 结束 -->
+	<!-- 底部 开始 -->
+	<div class="foot fixed">
+		<p>河北庞锐汽车商学院地址：河北省唐山市古冶区林西西中街55号 联系电话：03158133833 邮编：063100</p>
+	</div>
+	<!-- 底部 结束 -->
 </body>
 </html>

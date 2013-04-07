@@ -1,0 +1,33 @@
+<div class="mb_bottom">
+		<dl class="partners fixed">
+			<dt><span class="title diamond">合作企业</span></dt>
+			<dd class="fixed">
+			{pc:content action="lists" catid="38" num="8" order="listorder ASC"}
+			<ul>
+				{loop $data $r}
+				<li><a href="{$r[url]}"><img src="{thumb($r[thumb],118,56)}" alt="{$r[title]}" /></a></li>
+				{/loop}
+			</ul>
+			{/pc}
+			</dd>
+		</dl>
+		<ul class="footmenu fixed">
+			<li><a href="{siteurl($siteid)}">网站首页</a></li>
+			<li><a href="{$CATEGORYS[1]['url']}">{$CATEGORYS[1]['catname']}</a></li>
+			<li><a href="{$CATEGORYS[6]['url']}">{$CATEGORYS[6]['catname']}</a></li>
+			<li><a href="{$CATEGORYS[7]['url']}">{$CATEGORYS[7]['catname']}</a></li>
+			<li><a href="{$CATEGORYS[8]['url']}">{$CATEGORYS[8]['catname']}</a></li>
+			<li><a href="{$CATEGORYS[9]['url']}">{$CATEGORYS[9]['catname']}</a></li>
+			<li><a href="{$CATEGORYS[10]['url']}">{$CATEGORYS[10]['catname']}</a></li>
+			<li><a href="{$CATEGORYS[11]['url']}">{$CATEGORYS[11]['catname']}</a></li>
+			<li><a href="{$CATEGORYS[12]['url']}">{$CATEGORYS[12]['catname']}</a></li>
+			<li><a href="{$CATEGORYS[13]['url']}">{$CATEGORYS[13]['catname']}</a></li>
+			<li><a href="{$CATEGORYS[14]['url']}">{$CATEGORYS[14]['catname']}</a></li>
+		</ul>
+		</div>
+	</div>
+	<!-- 底部 开始 -->
+	<div class="foot fixed">
+		<p>河北庞锐汽车商学院地址：河北省唐山市古冶区林西西中街55号 联系电话：03158133833 邮编：063100</p>
+	</div>
+	<!-- 底部 结束 -->

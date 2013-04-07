@@ -175,7 +175,7 @@ class create_html extends admin {
 				foreach($this->categorys as $catid=>$r) {
 					if($this->siteid != $r['siteid'] || ($r['type']!=0 && $r['child']==0)) continue;
 					if($modelid && $modelid != $r['modelid']) continue;
-					$r['disabled'] = $r['child'] ? 'disabled' : '';
+					//$r['disabled'] = $r['child'] ? 'disabled' : '';
 					$categorys[$catid] = $r;
 				}
 			}

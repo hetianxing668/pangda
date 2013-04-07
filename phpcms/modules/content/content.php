@@ -511,7 +511,7 @@ class content extends admin {
 
 					default:
 						$strs = "<span class='\$icon_type'>\$add_icon<a href='?m=content&c=content&a=\$type&menuid=".$_GET['menuid']."&catid=\$catid' target='right' onclick='open_list(this)'>\$catname</a></span>";
-						$strs2 = "<span class='folder'>\$catname</span>";
+						$strs2 = "<span class='\$icon_type'>\$add_icon<a href='?m=content&c=content&a=\$type&menuid=".$_GET['menuid']."&catid=\$catid' target='right' onclick='open_list(this)'>\$catname</a></span>";
 						break;
 				}
 			$categorys = $tree->get_treeview(0,'category_tree',$strs,$strs2,$ajax_show);

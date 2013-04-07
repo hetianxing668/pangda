@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+	<meta name="keywords" content="{$SEO['keyword']}"/>
+	<meta name="description" content="{$SEO['description']}"/>
+	<link rel="stylesheet" type="text/css" href="{SKIN_PATH}/css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="{SKIN_PATH}/css/common.css"/>
+</head>
+<body>
+	{template "content","inc_header"}
+	
+	<!-- 头部广告 开始 -->
+	<div class="top_ad">
+	<a href="#"><img src="{SKIN_PATH}/images/img_topad.jpg" alt="" /></a>
+	</div>
+	<!-- 头部广告 结束 -->
+	<div class="mainbox fixed">
+		{template "content","inc_left"}
+		
+		<div class="rightbox fixed">
+			<div class="location">
+			当前位置：<a href="{siteurl($siteid)}">{$SEO['site_title']}</a> &gt; {catpos($catid)}列表页
+			</div>
+			<div class="img_list">
+			<ul>
+				<li><div class="photo"><a href="#"><img src="{SKIN_PATH}/images/img_xyhj_01.jpg" alt="" /></a></div><p><span class="title">校园环境：</span>400M标准跑道</p></li>
+				<li><div class="photo"><a href="#"><img src="{SKIN_PATH}/images/img_xyhj_02.jpg" alt="" /></a></div><p><span class="title">校园环境：</span>多功能教室</p></li>
+				<li><div class="photo"><a href="#"><img src="{SKIN_PATH}/images/img_xyhj_03.jpg" alt="" /></a></div><p><span class="title">校园环境：</span>机房</p></li>
+				<li><div class="photo"><a href="#"><img src="{SKIN_PATH}/images/img_xyhj_04.jpg" alt="" /></a></div><p><span class="title">校园环境：</span>多功能教室</p></li>
+				<li><div class="photo"><a href="#"><img src="{SKIN_PATH}/images/img_xyhj_05.jpg" alt="" /></a></div><p><span class="title">校园环境：</span>教学大楼全景</p></li>
+				<li><div class="photo"><a href="#"><img src="{SKIN_PATH}/images/img_xyhj_06.jpg" alt="" /></a></div><p><span class="title">校园环境：</span>校园广场</p></li>
+				<li><div class="photo"><a href="#"><img src="{SKIN_PATH}/images/img_xyhj_07.jpg" alt="" /></a></div><p><span class="title">校园环境：</span>宽阔的篮球场</p></li>
+				<li><div class="photo"><a href="#"><img src="{SKIN_PATH}/images/img_xyhj_08.jpg" alt="" /></a></div><p><span class="title">校园环境：</span>校园小花园一角</p></li>
+				<li><div class="photo"><a href="#"><img src="{SKIN_PATH}/images/img_xyhj_09.jpg" alt="" /></a></div><p><span class="title">校园环境：</span>展厅一角</p></li>
+				<li><div class="photo"><a href="#"><img src="{SKIN_PATH}/images/img_xyhj_10.jpg" alt="" /></a></div><p><span class="title">校园环境：</span>乒乓球室</p></li>
+			</ul>
+			</div>
+		</div>
+	</div>
+	
+	{template "content","inc_footer"}
+</body>
+</html>

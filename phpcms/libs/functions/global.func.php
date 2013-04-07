@@ -1652,5 +1652,15 @@ function get_vid($contentid = 0, $catid = 0, $isspecial = 0) {
 		return $minite.":".$secend;
 	}
 
- } 
+ }
+/**
+ * Function fileurlformat
+ * 真实地址转换
+  * @param $fileurl 文件地址
+ */
+function fileurlformat($fileurl)
+{
+	$arr = string2array($fileurl);
+	return $arr[0]['fileurl'];
+} 
 ?>

@@ -1,0 +1,62 @@
+<div class="leftbox fixed">
+<dl class="leftmenu">
+	<dd class="menu_top"></dd>
+	<dd class="menu_middle">
+	<ul>
+		{php $arr = Array(31,21,1,26,)}
+		{php $postionid = $catid}
+		{if $child == 0 && in_array($parentid,$arr)}
+			{php $cid = $parentid}
+		{else}
+			{php $cid = 1}
+		{/if}
+		{pc:get sql="select catid,catname,url from `pd_category` where parentid=$cid" return="data"}
+		 {loop $data $r} 
+		<li><span class="title"><a href="{$r['url']}">{$r['catname']}</a></span>{if $catid==$r['catid']}<span class="cur"></span>{/if}</li>
+		{/loop}
+		{/pc}
+	</ul>
+	</dd>
+	<dd class="menu_bottom"></dd>
+</dl>
+<dl class="address">
+	<dd>
+	<img src="{SKIN_PATH}/images/bg_leftmenu_teladdress.jpg" alt="" />
+	</dd>
+	<dd>
+	<a href="#"><img src="{SKIN_PATH}/images/bg_leftmenu_baoming.jpg" alt="" /></a>
+	</dd>
+</dl>
+<div class="major">
+	<h2></h2>
+	{pc:content action="category" catid="26"  siteid="$siteid" order="listorder ASC"} 
+	{loop $data $n $r}
+	<dl>
+		<dt>{$r['catname']}</dt>
+		<dd>
+		<ul>
+			{php $childid = $r['catid']}
+			{pc:get sql="SELECT A.catid,A.title,A.url,B.leftnum FROM `pd_kbxx` A INNER JOIN `pd_kbxx_data` B ON A.id=B.id WHERE A.catid = $childid" return="rows"} 
+			{loop $rows $val}
+			<li><span class="sp_txt"></span><a href="{$CATEGORYS[14]['url']}">{$val[title]}</a></li>
+			{/loop}
+			{/pc} 
+		</ul>
+		</dd>
+	</dl>
+	{/loop}
+	{/pc}
+</div>
+<dl class="taught">
+	<dt></dt>
+	<dd>
+	<ul>
+		<li><a href="{$CATEGORYS[43]['url']}"><img src="{SKIN_PATH}/images/img_leftmenu_plans_1.jpg" alt="" /></a></li>
+		<li><a href="{$CATEGORYS[44]['url']}"><img src="{SKIN_PATH}/images/img_leftmenu_plans_2.jpg" alt="" /></a></li>
+		<li><a href="{$CATEGORYS[45]['url']}"><img src="{SKIN_PATH}/images/img_leftmenu_plans_3.jpg" alt="" /></a></li>
+		<li><a href="{$CATEGORYS[46]['url']}"><img src="{SKIN_PATH}/images/img_leftmenu_plans_4.jpg" alt="" /></a></li>
+		<li><a href="{$CATEGORYS[47]['url']}"><img src="{SKIN_PATH}/images/img_leftmenu_plans_5.jpg" alt="" /></a></li>
+	</ul>
+	</dd>
+</dl>
+</div>
